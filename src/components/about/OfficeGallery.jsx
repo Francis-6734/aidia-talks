@@ -19,15 +19,15 @@ export default function OfficeGallery() {
 
   if (loading) {
     return (
-      <section className="py-12 md:py-20 bg-[#131313]">
+      <section className="py-12 md:py-20 bg-gray-100 dark:bg-[#131313] transition-colors">
         <div className="flex flex-col items-center mb-10 px-4">
-          <div className="w-10 h-10 bg-gray-800 rounded-full mb-4 animate-pulse" />
-          <div className="h-8 bg-gray-800 rounded w-72 mb-3 animate-pulse" />
-          <div className="h-5 bg-gray-800 rounded w-96 animate-pulse" />
+          <div className="w-10 h-10 bg-gray-200 dark:bg-gray-800 rounded-full mb-4 animate-pulse" />
+          <div className="h-8 bg-gray-200 dark:bg-gray-800 rounded w-72 mb-3 animate-pulse" />
+          <div className="h-5 bg-gray-200 dark:bg-gray-800 rounded w-96 animate-pulse" />
         </div>
         <div className="flex gap-4 overflow-hidden">
           {[1, 2, 3, 4, 5].map(i => (
-            <div key={i} className="w-72 h-52 bg-gray-800 rounded-2xl flex-shrink-0 animate-pulse" />
+            <div key={i} className="w-72 h-52 bg-gray-200 dark:bg-gray-800 rounded-2xl flex-shrink-0 animate-pulse" />
           ))}
         </div>
       </section>
@@ -44,7 +44,7 @@ export default function OfficeGallery() {
   const repeated = [...images, ...images]
 
   return (
-    <section className="py-12 md:py-20 bg-[#131313] overflow-hidden">
+    <section className="py-12 md:py-20 bg-gray-100 dark:bg-[#131313] overflow-hidden transition-colors">
       {/* Header */}
       <motion.div
         className="flex flex-col items-center mb-10 md:mb-14 px-4"
@@ -58,27 +58,27 @@ export default function OfficeGallery() {
           alt="Aidia Talks"
           className="w-10 h-10 md:w-12 md:h-12 object-contain mb-4"
         />
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-navy dark:text-white text-center">
           {before}{' '}
           <span className="text-[#6366f1]">{highlight}</span>{' '}
           {after}
         </h2>
-        <p className="mt-3 text-sm sm:text-base text-gray-400 text-center max-w-xl">
+        <p className="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-400 text-center max-w-xl">
           {subheading}
         </p>
       </motion.div>
 
       {/* Infinite scroll gallery */}
-      <div className="flex gap-2 md:gap-3 animate-gallery-scroll" style={{ width: 'max-content' }}>
+      <div className="flex gap-1 md:gap-3 animate-gallery-scroll" style={{ width: 'max-content' }}>
         {repeated.map((img, i) => (
           <div
             key={`${img.id}-${i}`}
-            className="w-72 sm:w-80 md:w-[26rem] flex-shrink-0 overflow-hidden rounded-2xl bg-[#1a1a1a]"
+            className="w-72 sm:w-80 md:w-[26rem] flex-shrink-0 overflow-hidden rounded-2xl bg-gray-200 dark:bg-[#1a1a1a]"
           >
             <img
               src={img.image_url}
               alt={img.alt_text || 'Office'}
-              className="w-full h-auto rounded-2xl"
+              className="w-full h-auto rounded-1xl"
             />
           </div>
         ))}

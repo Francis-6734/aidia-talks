@@ -97,7 +97,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="min-h-screen flex items-center pt-16 bg-gradient-to-br from-white via-gray-50 to-cream dark:from-[#0a0f1a] dark:via-navy dark:to-navy-dark overflow-hidden transition-colors">
+    <section className="min-h-screen flex items-center pt-16 bg-gradient-to-br from-white via-gray-50 to-cream dark:from-[#111111] dark:via-[#141414] dark:to-[#1a1a1a] overflow-hidden transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 lg:py-24">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12">
           {/* Left - Text */}
