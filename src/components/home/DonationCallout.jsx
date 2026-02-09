@@ -13,7 +13,7 @@ export default function DonationCallout() {
   if (loading) return null
 
   return (
-    <section className="py-10 md:py-20 bg-white dark:bg-[#0f172a] transition-colors">
+    <section className="py-10 md:py-20 bg-white dark:bg-[#141414] transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="bg-gradient-to-r from-orange to-orange-light rounded-2xl md:rounded-3xl p-6 sm:p-10 md:p-14 text-center text-white relative overflow-hidden"

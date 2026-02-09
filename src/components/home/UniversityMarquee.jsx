@@ -16,7 +16,7 @@ export default function UniversityMarquee() {
 
   if (loading) {
     return (
-      <section className="py-10 md:py-16 bg-white dark:bg-[#0f172a] transition-colors">
+      <section className="py-10 md:py-16 bg-white dark:bg-[#141414] transition-colors">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-pulse text-center space-y-3 mb-10 md:mb-14">
             <div className="h-8 bg-gray-200 dark:bg-gray-800 rounded w-56 mx-auto" />
@@ -38,7 +38,7 @@ export default function UniversityMarquee() {
   const subheading = content.marquee_subheading || 'Leading Kenyan universities and TVETs partner with us to inspire innovation.'
 
   return (
-    <section className="py-10 md:py-16 bg-white dark:bg-[#0f172a] transition-colors">
+    <section className="py-10 md:py-16 bg-white dark:bg-[#141414] transition-colors">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.div

@@ -8,7 +8,7 @@ export default function StatsCounter() {
 
   if (loading) {
     return (
-      <section className="py-8 md:py-16 bg-gray-50 dark:bg-[#0f172a] transition-colors">
+      <section className="py-8 md:py-16 bg-gray-50 dark:bg-[#141414] transition-colors">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[1, 2, 3, 4].map(i => (
@@ -31,10 +31,10 @@ export default function StatsCounter() {
   if (stats.length === 0) return null
 
   return (
-    <section className="py-8 md:py-16 bg-gray-50 dark:bg-[#0f172a] transition-colors">
+    <section className="py-8 md:py-16 bg-gray-50 dark:bg-[#141414] transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="flex flex-wrap justify-center"
+          className="grid grid-cols-2 gap-y-6 md:flex md:flex-wrap md:justify-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -44,7 +44,7 @@ export default function StatsCounter() {
             <div key={i} className="flex items-center">
               {/* Vertical divider (before every item except the first) */}
               {i > 0 && (
-                <div className="hidden sm:block w-px h-16 bg-gray-300 dark:bg-gray-700/60 mx-6 md:mx-10 flex-shrink-0" />
+                <div className="hidden md:block w-px h-16 bg-gray-300 dark:bg-gray-700/60 mx-6 md:mx-10 flex-shrink-0" />
               )}
 
               <div className="text-center px-4 sm:px-2 py-4">

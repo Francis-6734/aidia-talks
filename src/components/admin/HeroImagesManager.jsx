@@ -89,7 +89,7 @@ export default function HeroImagesManager() {
       </div>
 
       {/* Upload form */}
-      <div className="bg-white dark:bg-navy rounded-xl border border-gray-100 dark:border-gray-800 p-5 mb-6">
+      <div className="bg-white dark:bg-[#1c1c1c] rounded-xl border border-gray-100 dark:border-gray-800 p-5 mb-6">
         <div className="flex flex-col sm:flex-row gap-4 items-end">
           <div className="flex-1">
             <label className="block text-sm font-medium text-navy dark:text-gray-300 mb-1">Alt Text (optional)</label>
@@ -98,7 +98,7 @@ export default function HeroImagesManager() {
               value={altText}
               onChange={e => setAltText(e.target.value)}
               placeholder="Describe the image"
-              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
             />
           </div>
           <div>
@@ -106,7 +106,7 @@ export default function HeroImagesManager() {
             <select
               value={column}
               onChange={e => setColumn(Number(e.target.value))}
-              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
             >
               <option value={1}>Column 1 (scrolls up)</option>
               <option value={2}>Column 2 (scrolls down)</option>
@@ -193,7 +193,7 @@ export default function HeroImagesManager() {
 
 function ImageCard({ image, isFirst, isLast, onDelete, onMove }) {
   return (
-    <div className="bg-white dark:bg-navy rounded-xl border border-gray-100 dark:border-gray-800 p-3 flex items-center gap-3">
+    <div className="bg-white dark:bg-[#1c1c1c] rounded-xl border border-gray-100 dark:border-gray-800 p-3 flex items-center gap-3">
       <img
         src={image.image_url}
         alt={image.alt_text || 'Hero image'}

@@ -81,7 +81,7 @@ export default function ContactForm() {
               type="text"
               value={form.name}
               onChange={handleChange('name')}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 dark:bg-navy dark:text-white focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition-all text-sm"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 dark:bg-[#1c1c1c] dark:text-white focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition-all text-sm"
               placeholder="Your full name"
             />
             {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
@@ -96,7 +96,7 @@ export default function ContactForm() {
               type="email"
               value={form.email}
               onChange={handleChange('email')}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 dark:bg-navy dark:text-white focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition-all text-sm"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 dark:bg-[#1c1c1c] dark:text-white focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition-all text-sm"
               placeholder="you@example.com"
             />
             {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -111,7 +111,7 @@ export default function ContactForm() {
               type="text"
               value={form.institution}
               onChange={handleChange('institution')}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 dark:bg-navy dark:text-white focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition-all text-sm"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 dark:bg-[#1c1c1c] dark:text-white focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition-all text-sm"
               placeholder="University or organization"
             />
           </div>
@@ -125,7 +125,7 @@ export default function ContactForm() {
               rows={5}
               value={form.message}
               onChange={handleChange('message')}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 dark:bg-navy dark:text-white focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition-all text-sm resize-none"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 dark:bg-[#1c1c1c] dark:text-white focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition-all text-sm resize-none"
               placeholder="Tell us how we can help..."
             />
             {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}

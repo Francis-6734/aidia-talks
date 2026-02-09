@@ -27,7 +27,7 @@ export default function AboutStats() {
 
   if (loading) {
     return (
-      <section className="py-10 md:py-16 bg-gray-50 dark:bg-[#0f172a] transition-colors">
+      <section className="py-10 md:py-16 bg-gray-50 dark:bg-[#141414] transition-colors">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-pulse space-y-4 text-center mb-8">
             <div className="h-8 bg-gray-200 dark:bg-gray-800 rounded w-72 mx-auto" />
@@ -60,7 +60,7 @@ export default function AboutStats() {
   if (stats.length === 0) return null
 
   return (
-    <section className="py-10 md:py-16 bg-gray-50 dark:bg-[#0f172a] transition-colors">
+    <section className="py-10 md:py-16 bg-gray-50 dark:bg-[#141414] transition-colors">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.div
@@ -83,7 +83,7 @@ export default function AboutStats() {
 
         {/* Stats */}
         <motion.div
-          className="flex flex-wrap justify-center"
+          className="grid grid-cols-2 gap-y-6 md:flex md:flex-wrap md:justify-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -92,7 +92,7 @@ export default function AboutStats() {
           {stats.map((stat, i) => (
             <div key={i} className="flex items-center">
               {i > 0 && (
-                <div className="hidden sm:block w-px h-14 bg-gray-300 dark:bg-gray-700/60 mx-4 md:mx-8 flex-shrink-0" />
+                <div className="hidden md:block w-px h-14 bg-gray-300 dark:bg-gray-700/60 mx-4 md:mx-8 flex-shrink-0" />
               )}
               <div className="text-center px-3 sm:px-2 py-3">
                 <div className="text-3xl sm:text-4xl md:text-5xl font-display font-bold bg-gradient-to-r from-[#6366f1] to-[#818cf8] bg-clip-text text-transparent">

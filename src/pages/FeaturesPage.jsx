@@ -9,7 +9,7 @@ export default function FeaturesPage() {
   })
 
   return (
-    <div className="pt-24 pb-20 bg-white dark:bg-[#0f172a] transition-colors">
+    <div className="pt-24 pb-20 bg-white dark:bg-[#141414] transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-14"

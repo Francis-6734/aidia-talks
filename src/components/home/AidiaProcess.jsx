@@ -63,7 +63,7 @@ export default function AidiaProcess() {
 
   if (loading) {
     return (
-      <section className="py-10 md:py-20 bg-white dark:bg-[#0f172a] transition-colors">
+      <section className="py-10 md:py-20 bg-white dark:bg-[#141414] transition-colors">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-pulse space-y-4 text-center mb-8 md:mb-12">
             <div className="h-8 bg-gray-200 dark:bg-gray-800 rounded w-64 mx-auto" />
@@ -83,7 +83,7 @@ export default function AidiaProcess() {
   const descriptions = steps.map(s => content[s.descKey] || '')
 
   return (
-    <section ref={sectionRef} className="py-10 md:py-20 bg-white dark:bg-[#0f172a] overflow-hidden transition-colors">
+    <section ref={sectionRef} className="py-10 md:py-20 bg-white dark:bg-[#141414] overflow-hidden transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <motion.div

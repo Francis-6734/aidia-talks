@@ -16,7 +16,7 @@ export default function Navbar() {
   const { dark, toggleTheme } = useTheme()
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-navy/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800 transition-colors">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-[#141414]/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800 transition-colors">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <Link to="/" className="flex items-center">
           <img src="/Logo.png" alt="Aidia Talks" className="h-10" />
@@ -80,7 +80,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-white dark:bg-navy border-b border-gray-100 dark:border-gray-800 px-4 pb-4"
+            className="md:hidden bg-white dark:bg-[#141414] border-b border-gray-100 dark:border-gray-800 px-4 pb-4"
           >
             <div className="flex flex-col gap-3">
               {links.map(link => (

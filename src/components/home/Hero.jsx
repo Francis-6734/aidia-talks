@@ -157,7 +157,7 @@ export default function Hero() {
               <div className="h-full flex gap-3">
                 <div className="w-1/2 flex flex-col gap-3">
                   {[1, 2, 3].map(i => (
-                    <div key={i} className="flex-1 bg-gray-100 dark:bg-navy-light rounded-xl flex items-center justify-center">
+                    <div key={i} className="flex-1 bg-gray-100 dark:bg-[#242424] rounded-xl flex items-center justify-center">
                       <div className="text-center text-gray-500 px-4">
                         <div className="text-2xl mb-1">📷</div>
                         <p className="text-xs">Upload via admin</p>
@@ -167,7 +167,7 @@ export default function Hero() {
                 </div>
                 <div className="w-1/2 flex flex-col gap-3">
                   {[4, 5, 6].map(i => (
-                    <div key={i} className="flex-1 bg-gray-100 dark:bg-navy-light rounded-xl flex items-center justify-center">
+                    <div key={i} className="flex-1 bg-gray-100 dark:bg-[#242424] rounded-xl flex items-center justify-center">
                       <div className="text-center text-gray-500 px-4">
                         <div className="text-2xl mb-1">📷</div>
                         <p className="text-xs">Upload via admin</p>

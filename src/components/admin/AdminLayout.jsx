@@ -1,17 +1,19 @@
 import { useState } from 'react'
 import { useAuth } from '../../context/AuthContext'
-import { HiOutlineSpeakerphone, HiOutlinePhotograph, HiOutlinePencilAlt, HiOutlineMail, HiOutlineLogout, HiOutlineAcademicCap, HiOutlineViewGrid } from 'react-icons/hi'
+import { HiOutlineSpeakerphone, HiOutlinePhotograph, HiOutlinePencilAlt, HiOutlineMail, HiOutlineLogout, HiOutlineAcademicCap, HiOutlineViewGrid, HiOutlineOfficeBuilding } from 'react-icons/hi'
 import TalksManager from './TalksManager'
 import FeaturesManager from './FeaturesManager'
 import ContentManager from './ContentManager'
 import MessagesManager from './MessagesManager'
 import PartnersManager from './PartnersManager'
 import HeroImagesManager from './HeroImagesManager'
+import GalleryManager from './GalleryManager'
 
 const tabs = [
   { id: 'talks', label: 'Talks', icon: HiOutlineSpeakerphone },
   { id: 'hero', label: 'Hero Images', icon: HiOutlineViewGrid },
   { id: 'partners', label: 'Universities', icon: HiOutlineAcademicCap },
+  { id: 'gallery', label: 'Office Gallery', icon: HiOutlineOfficeBuilding },
   { id: 'features', label: 'Features / Blog', icon: HiOutlinePhotograph },
   { id: 'content', label: 'Site Content', icon: HiOutlinePencilAlt },
   { id: 'messages', label: 'Messages', icon: HiOutlineMail },
@@ -22,7 +24,7 @@ export default function AdminLayout() {
   const [activeTab, setActiveTab] = useState('talks')
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-[#0f172a] pt-20 transition-colors">
+    <div className="min-h-screen bg-gray-50 dark:bg-[#141414] pt-20 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex items-center justify-between mb-8">
           <h1 className="text-2xl font-display font-bold text-navy dark:text-white">Admin Dashboard</h1>
@@ -60,6 +62,7 @@ export default function AdminLayout() {
         {activeTab === 'talks' && <TalksManager />}
         {activeTab === 'hero' && <HeroImagesManager />}
         {activeTab === 'partners' && <PartnersManager />}
+        {activeTab === 'gallery' && <GalleryManager />}
         {activeTab === 'features' && <FeaturesManager />}
         {activeTab === 'content' && <ContentManager />}
         {activeTab === 'messages' && <MessagesManager />}

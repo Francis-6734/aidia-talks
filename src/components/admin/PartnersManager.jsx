@@ -115,7 +115,7 @@ export default function PartnersManager() {
       {/* Form Modal */}
       {showForm && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-navy rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto p-6">
+          <div className="bg-white dark:bg-[#1c1c1c] rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto p-6">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-lg font-display font-bold text-navy dark:text-white">
                 {editingId ? 'Edit Partner' : 'Add University Partner'}
@@ -132,7 +132,7 @@ export default function PartnersManager() {
                   type="text"
                   value={form.name}
                   onChange={e => setForm(prev => ({ ...prev, name: e.target.value }))}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
                   placeholder="e.g. University of Nairobi"
                   required
                 />
@@ -148,7 +148,7 @@ export default function PartnersManager() {
                 />
                 {uploading && <p className="text-xs text-gray-400 mt-1">Uploading...</p>}
                 {form.logo_url && (
-                  <img src={form.logo_url} alt="Logo preview" className="mt-2 h-16 object-contain bg-gray-50 dark:bg-navy-dark rounded-lg p-2" />
+                  <img src={form.logo_url} alt="Logo preview" className="mt-2 h-16 object-contain bg-gray-50 dark:bg-[#0e0e0e] rounded-lg p-2" />
                 )}
               </div>
 
@@ -158,7 +158,7 @@ export default function PartnersManager() {
                   type="url"
                   value={form.website_url}
                   onChange={e => setForm(prev => ({ ...prev, website_url: e.target.value }))}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
                   placeholder="https://www.uonbi.ac.ke"
                 />
               </div>
@@ -169,7 +169,7 @@ export default function PartnersManager() {
                   type="number"
                   value={form.display_order}
                   onChange={e => setForm(prev => ({ ...prev, display_order: parseInt(e.target.value) || 0 }))}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
                 />
               </div>
 
@@ -197,17 +197,17 @@ export default function PartnersManager() {
           {partners.map(partner => (
             <div
               key={partner.id}
-              className="bg-white dark:bg-navy rounded-xl border border-gray-100 dark:border-gray-800 p-4 flex items-center justify-between gap-4"
+              className="bg-white dark:bg-[#1c1c1c] rounded-xl border border-gray-100 dark:border-gray-800 p-4 flex items-center justify-between gap-4"
             >
               <div className="flex items-center gap-4 flex-1 min-w-0">
                 {partner.logo_url ? (
                   <img
                     src={partner.logo_url}
                     alt={partner.name}
-                    className="h-10 w-16 object-contain flex-shrink-0 bg-gray-50 dark:bg-navy-dark rounded p-1"
+                    className="h-10 w-16 object-contain flex-shrink-0 bg-gray-50 dark:bg-[#0e0e0e] rounded p-1"
                   />
                 ) : (
-                  <div className="h-10 w-16 bg-gray-100 dark:bg-navy-dark rounded flex items-center justify-center flex-shrink-0">
+                  <div className="h-10 w-16 bg-gray-100 dark:bg-[#0e0e0e] rounded flex items-center justify-center flex-shrink-0">
                     <span className="text-xs text-gray-400">No logo</span>
                   </div>
                 )}

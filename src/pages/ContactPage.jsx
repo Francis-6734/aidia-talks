@@ -12,7 +12,7 @@ export default function ContactPage() {
   const { content } = useSiteContent(['contact_heading', 'contact_subheading'])
 
   return (
-    <div className="pt-24 pb-20 bg-white dark:bg-[#0f172a] transition-colors">
+    <div className="pt-24 pb-20 bg-white dark:bg-[#141414] transition-colors">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-14"

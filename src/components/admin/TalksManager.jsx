@@ -128,7 +128,7 @@ export default function TalksManager() {
       {/* Form Modal */}
       {showForm && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-navy rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto p-6">
+          <div className="bg-white dark:bg-[#1c1c1c] rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto p-6">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-lg font-display font-bold text-navy dark:text-white">
                 {editingId ? 'Edit Talk' : 'New Talk'}
@@ -145,7 +145,7 @@ export default function TalksManager() {
                   type="text"
                   value={form.title}
                   onChange={e => setForm(prev => ({ ...prev, title: e.target.value }))}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
                   required
                 />
               </div>
@@ -157,7 +157,7 @@ export default function TalksManager() {
                     type="date"
                     value={form.date}
                     onChange={e => setForm(prev => ({ ...prev, date: e.target.value }))}
-                    className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
+                    className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
                     required
                   />
                 </div>
@@ -166,7 +166,7 @@ export default function TalksManager() {
                   <select
                     value={form.talk_type}
                     onChange={e => setForm(prev => ({ ...prev, talk_type: e.target.value }))}
-                    className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
+                    className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
                   >
                     <option value="past">Past</option>
                     <option value="upcoming">Upcoming</option>
@@ -180,7 +180,7 @@ export default function TalksManager() {
                   type="text"
                   value={form.institution}
                   onChange={e => setForm(prev => ({ ...prev, institution: e.target.value }))}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
                   required
                 />
               </div>
@@ -191,7 +191,7 @@ export default function TalksManager() {
                   type="text"
                   value={form.speaker}
                   onChange={e => setForm(prev => ({ ...prev, speaker: e.target.value }))}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
                 />
               </div>
 
@@ -201,7 +201,7 @@ export default function TalksManager() {
                   rows={3}
                   value={form.summary}
                   onChange={e => setForm(prev => ({ ...prev, summary: e.target.value }))}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none resize-none"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none resize-none"
                 />
               </div>
 
@@ -245,7 +245,7 @@ export default function TalksManager() {
           {filtered.map(talk => (
             <div
               key={talk.id}
-              className="bg-white dark:bg-navy rounded-xl border border-gray-100 dark:border-gray-800 p-4 flex items-center justify-between gap-4"
+              className="bg-white dark:bg-[#1c1c1c] rounded-xl border border-gray-100 dark:border-gray-800 p-4 flex items-center justify-between gap-4"
             >
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">

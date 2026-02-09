@@ -26,7 +26,7 @@ function Countdown({ targetDate }) {
         { val: timeLeft.seconds, label: 'Sec' },
       ].map(unit => (
         <div key={unit.label} className="text-center">
-          <div className="bg-navy dark:bg-navy-light text-white font-display font-bold text-lg w-12 h-12 rounded-lg flex items-center justify-center">
+          <div className="bg-navy dark:bg-[#242424] text-white font-display font-bold text-lg w-12 h-12 rounded-lg flex items-center justify-center">
             {String(unit.val).padStart(2, '0')}
           </div>
           <span className="text-xs text-gray-500 dark:text-gray-400 mt-1 block">{unit.label}</span>
@@ -58,7 +58,7 @@ export default function UpcomingTalks() {
   if (loading || talks.length === 0) return null
 
   return (
-    <section className="py-10 md:py-20 bg-gray-50 dark:bg-navy-dark transition-colors">
+    <section className="py-10 md:py-20 bg-gray-50 dark:bg-[#0e0e0e] transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-8 md:mb-14"
@@ -79,7 +79,7 @@ export default function UpcomingTalks() {
           {talks.map((talk, i) => (
             <motion.div
               key={talk.id}
-              className="bg-white dark:bg-navy rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-shadow"
+              className="bg-white dark:bg-[#1c1c1c] rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-shadow"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

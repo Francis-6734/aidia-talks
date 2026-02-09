@@ -60,7 +60,7 @@ export default function MessagesManager() {
           {messages.map(msg => (
             <div
               key={msg.id}
-              className={`bg-white dark:bg-navy rounded-xl border p-4 ${
+              className={`bg-white dark:bg-[#1c1c1c] rounded-xl border p-4 ${
                 msg.is_read ? 'border-gray-100 dark:border-gray-800' : 'border-orange/30 bg-orange/5 dark:bg-orange/10'
               }`}
             >

@@ -107,7 +107,7 @@ export default function FeaturesManager() {
       {/* Form Modal */}
       {showForm && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-navy rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto p-6">
+          <div className="bg-white dark:bg-[#1c1c1c] rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto p-6">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-lg font-display font-bold text-navy dark:text-white">
                 {editingId ? 'Edit Post' : 'New Post'}
@@ -124,7 +124,7 @@ export default function FeaturesManager() {
                   type="text"
                   value={form.title}
                   onChange={e => setForm(prev => ({ ...prev, title: e.target.value }))}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
                   required
                 />
               </div>
@@ -135,7 +135,7 @@ export default function FeaturesManager() {
                   rows={4}
                   value={form.description}
                   onChange={e => setForm(prev => ({ ...prev, description: e.target.value }))}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none resize-none"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none resize-none"
                 />
               </div>
 
@@ -144,7 +144,7 @@ export default function FeaturesManager() {
                 <select
                   value={form.category}
                   onChange={e => setForm(prev => ({ ...prev, category: e.target.value }))}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
                 >
                   <option value="field-visit">Field Visit</option>
                   <option value="news">News</option>
@@ -193,7 +193,7 @@ export default function FeaturesManager() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {features.map(item => (
-            <div key={item.id} className="bg-white dark:bg-navy rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden">
+            <div key={item.id} className="bg-white dark:bg-[#1c1c1c] rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden">
               {item.image_url && (
                 <img src={item.image_url} alt={item.title} className="w-full h-36 object-cover" />
               )}

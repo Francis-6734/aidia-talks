@@ -116,7 +116,7 @@ export default function ContentManager() {
 
                 if (isImageKey(entry.key)) {
                   return (
-                    <div key={entry.id} className="bg-white dark:bg-navy rounded-xl border border-gray-100 dark:border-gray-800 p-4">
+                    <div key={entry.id} className="bg-white dark:bg-[#1c1c1c] rounded-xl border border-gray-100 dark:border-gray-800 p-4">
                       <label className="block text-xs font-medium text-gray-500 mb-2">
                         {entry.key}
                         {entry.description && (
@@ -164,7 +164,7 @@ export default function ContentManager() {
                 }
 
                 return (
-                  <div key={entry.id} className="bg-white dark:bg-navy rounded-xl border border-gray-100 dark:border-gray-800 p-4">
+                  <div key={entry.id} className="bg-white dark:bg-[#1c1c1c] rounded-xl border border-gray-100 dark:border-gray-800 p-4">
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
                         <label className="block text-xs font-medium text-gray-500 mb-1">
@@ -178,14 +178,14 @@ export default function ContentManager() {
                             rows={3}
                             value={currentValue}
                             onChange={e => handleChange(entry.id, e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none resize-none"
+                            className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none resize-none"
                           />
                         ) : (
                           <input
                             type="text"
                             value={currentValue}
                             onChange={e => handleChange(entry.id, e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
+                            className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white text-sm focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none"
                           />
                         )}
                       </div>

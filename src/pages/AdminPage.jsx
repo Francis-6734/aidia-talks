@@ -51,9 +51,9 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center pt-16 bg-gray-50 dark:bg-[#0f172a]">
+    <div className="min-h-screen flex items-center justify-center pt-16 bg-gray-50 dark:bg-[#141414]">
       <div className="w-full max-w-sm mx-4">
-        <div className="bg-white dark:bg-navy rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-8">
+        <div className="bg-white dark:bg-[#1c1c1c] rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-8">
           <div className="text-center mb-8">
             <h1 className="text-2xl font-display font-bold text-navy dark:text-white">
               Aidia<span className="text-orange">Talks</span>
@@ -71,7 +71,7 @@ export default function AdminPage() {
                 type="email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none text-sm"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none text-sm"
                 placeholder="admin@aidiatalks.co.ke"
                 required
               />
@@ -86,7 +86,7 @@ export default function AdminPage() {
                 type="password"
                 value={password}
                 onChange={e => setPassword(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 dark:bg-navy-dark dark:text-white focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none text-sm"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 dark:bg-[#0e0e0e] dark:text-white focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none text-sm"
                 placeholder="Enter your password"
                 required
               />

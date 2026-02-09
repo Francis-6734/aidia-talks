@@ -35,7 +35,7 @@ export default function MasonryGrid() {
       {features.map((item, i) => (
         <motion.article
           key={item.id}
-          className="break-inside-avoid bg-white dark:bg-navy rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-shadow"
+          className="break-inside-avoid bg-white dark:bg-[#1c1c1c] rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-shadow"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}

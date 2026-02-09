@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useSEO } from '../hooks/useSEO'
 import { useSiteContent } from '../hooks/useSupabase'
 import AboutStats from '../components/about/AboutStats'
+import OfficeGallery from '../components/about/OfficeGallery'
 
 const sectionAnim = {
   initial: { opacity: 0, y: 30 },
@@ -47,7 +48,7 @@ export default function AboutPage() {
         <AboutStats />
       </div>
 
-      <div className="py-10 md:py-20 bg-white dark:bg-[#0f172a] transition-colors">
+      <div className="py-10 md:py-20 bg-white dark:bg-[#141414] transition-colors">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Vision */}
           <motion.section className="mb-10 md:mb-20" {...sectionAnim}>
@@ -83,7 +84,7 @@ export default function AboutPage() {
 
           {/* Provocation Pillar */}
           <motion.section {...sectionAnim}>
-            <div className="bg-cream dark:bg-navy rounded-2xl md:rounded-3xl p-6 sm:p-10 md:p-14">
+            <div className="bg-cream dark:bg-[#1c1c1c] rounded-2xl md:rounded-3xl p-6 sm:p-10 md:p-14">
               <h2 className="text-2xl font-display font-bold text-navy dark:text-white mb-4">The Provocation Pillar</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 We bring field specialists to challenge students, expose breakthroughs, and discuss industry hurdles.
@@ -93,6 +94,8 @@ export default function AboutPage() {
           </motion.section>
         </div>
       </div>
+
+      <OfficeGallery />
     </>
   )
 }

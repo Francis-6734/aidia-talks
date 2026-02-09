@@ -1,45 +1,5 @@
-import { useId } from 'react'
 import { motion } from 'framer-motion'
 import { useSiteContent } from '../../hooks/useSupabase'
-
-function MaskedPortrait({ src, alt }) {
-  const clipId = useId()
-
-  if (!src) {
-    return (
-      <div className="aspect-[5/6] bg-gray-100 dark:bg-navy-light rounded-2xl flex items-center justify-center">
-        <p className="text-gray-400 text-sm text-center px-4">Upload image via admin</p>
-      </div>
-    )
-  }
-
-  return (
-    <svg
-      viewBox="0 0 500 600"
-      className="w-full h-auto"
-      role="img"
-      aria-label={alt}
-    >
-      <defs>
-        <clipPath id={clipId}>
-          {/* Primary tall ellipse — reveals the portrait */}
-          <ellipse cx="200" cy="300" rx="175" ry="295" />
-          {/* Secondary narrower ellipse — offset right, creates the sculptural peek */}
-          <ellipse cx="435" cy="300" rx="65" ry="215" />
-        </clipPath>
-      </defs>
-      <image
-        href={src}
-        x="0"
-        y="0"
-        width="500"
-        height="600"
-        preserveAspectRatio="xMidYMid slice"
-        clipPath={`url(#${clipId})`}
-      />
-    </svg>
-  )
-}
 
 export default function Testimonial() {
   const { content, loading } = useSiteContent([
@@ -51,7 +11,7 @@ export default function Testimonial() {
 
   if (loading) {
     return (
-      <section className="py-10 md:py-16 bg-white dark:bg-[#0f172a] transition-colors">
+      <section className="py-10 md:py-16 bg-white dark:bg-[#141414] transition-colors">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-12">
             <div className="md:w-1/2 animate-pulse space-y-4">
@@ -80,7 +40,7 @@ export default function Testimonial() {
   if (!quote && !name) return null
 
   return (
-    <section className="py-10 md:py-16 bg-white dark:bg-[#0f172a] transition-colors overflow-hidden">
+    <section className="py-10 md:py-16 bg-white dark:bg-[#141414] transition-colors overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-12 lg:gap-16">
           {/* Left — Quote */}
@@ -109,7 +69,7 @@ export default function Testimonial() {
             )}
           </motion.div>
 
-          {/* Right — SVG Masked Portrait */}
+          {/* Right — Portrait */}
           <motion.div
             className="md:w-1/2"
             initial={{ opacity: 0, x: 30 }}
@@ -118,7 +78,17 @@ export default function Testimonial() {
             transition={{ duration: 0.6, delay: 0.15 }}
           >
             <div className="max-w-md mx-auto md:max-w-none">
-              <MaskedPortrait src={image} alt={name || 'Testimonial'} />
+              {image ? (
+                <img
+                  src={image}
+                  alt={name || 'Testimonial'}
+                  className="w-full aspect-[5/6] object-cover rounded-3xl"
+                />
+              ) : (
+                <div className="aspect-[5/6] bg-gray-100 dark:bg-[#242424] rounded-3xl flex items-center justify-center">
+                  <p className="text-gray-400 text-sm text-center px-4">Upload image via admin</p>
+                </div>
+              )}
             </div>
           </motion.div>
         </div>
