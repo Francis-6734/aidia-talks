@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-navy: #0B1C2D;
+  --color-navy-light: #132D45;
+  --color-navy-dark: #06111C;
+  --color-orange: #F57C00;
+  --color-orange-light: #FF9800;
+  --color-orange-dark: #E65100;
+  --color-cream: #FFF8F0;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-fade-in: fadeIn 0.6s ease-out;
+  --animate-scroll-up: scrollUp 25s linear infinite;
+  --animate-scroll-down: scrollDown 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollDown {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-navy);
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .dark body {
+    color: #e2e8f0;
+    background-color: #0f172a;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
