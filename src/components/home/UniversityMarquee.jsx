@@ -64,18 +64,20 @@ export default function UniversityMarquee() {
           style={{ width: 'max-content' }}
         >
           {[...partners, ...partners].map((partner, i) => (
-            <div key={`${partner.id}-${i}`} className="flex-shrink-0 px-2 md:px-4">
-              {partner.logo_url ? (
+            <div
+              key={`${partner.id}-${i}`}
+              className="flex-shrink-0 px-2 md:px-4 flex flex-col items-center gap-2 group"
+            >
+              {partner.logo_url && (
                 <img
                   src={partner.logo_url}
                   alt={partner.name}
-                  className="h-8 sm:h-9 md:h-10 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 dark:invert dark:opacity-60 dark:hover:opacity-100 transition-all duration-300"
+                  className="h-8 sm:h-9 md:h-10 w-auto object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 dark:invert dark:opacity-60 dark:group-hover:opacity-100 transition-all duration-300"
                 />
-              ) : (
-                <span className="text-gray-400 dark:text-gray-500 font-semibold text-sm md:text-base whitespace-nowrap hover:text-navy dark:hover:text-white transition-colors duration-300">
-                  {partner.name}
-                </span>
               )}
+              <span className="text-gray-400 dark:text-gray-500 font-semibold text-xs md:text-sm whitespace-nowrap group-hover:text-navy dark:group-hover:text-white transition-colors duration-300">
+                {partner.name}
+              </span>
             </div>
           ))}
         </div>
